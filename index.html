@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Day Scheduler</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script>dayjs().format()</script>
+
 </head>
 <body>
+    <div class="container">
+        <div class="time-block" id="hour-9">
+          <textarea class="description"></textarea>
+          <button class="saveBtn">Save</button>
+        </div>
+        <div class="time-block" id="hour-10">
+          <textarea class="description"></textarea>
+          <button class="saveBtn">Save</button>
+        </div>
+        <!-- More time-block elements... -->
+      </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="./assets/js/script.js"></script> 
