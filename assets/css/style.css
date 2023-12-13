@@ -3,6 +3,24 @@ body {
     font-size: 16px;
   }
   
+  header {
+background-color: skyblue;
+text-align: center;
+border-radius: 20px;
+padding: 5px;
+  }
+
+  h1 {
+    font-weight: bold ;
+    font-size: 35px;
+  }
+
+  p {
+   font-weight: bold;
+   font-size: 20px;
+   color: white;
+  }
+  
   textarea {
     background: transparent;
     border: none;
