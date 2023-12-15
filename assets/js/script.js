@@ -19,25 +19,34 @@ $(function () {
   });
 
   // TODO: Add code to apply the past, present, or future class to each time
-// block by comparing the id to the current hour.
-var currentHour = dayjs().hour(); // Get the current hour
+  // block by comparing the id to the current hour.
+  var currentHour = dayjs().hour(); // Get the current hour once
 
-$('.time-block').each(function () {
-  var timeBlockHour = parseInt($(this).attr('id'));
+  $('.time-block').each(function () {
+    var timeBlockHour = parseInt($(this).attr('id'), 10);
 
-  // Log the time block ID and its relation to the current hour
-  console.log(`Time block ID: ${timeBlockHour}, Current hour: ${currentHour}`);
+    // Log the time block ID and its relation to the current hour
+    console.log(`Time block ID: ${timeBlockHour}, Current hour: ${currentHour}`);
 
-  if (timeBlockHour < currentHour) {
-    $(this).addClass('past');
-   console.log('Past');
-  } else if (timeBlockHour === currentHour) {
-    $(this).addClass('present');
-    console.log('Present');
-  } else {
-    $(this).addClass('future');
-    console.log('Future');
-  }
+    if (timeBlockHour < currentHour) {
+      $(this).removeClass('future present').addClass('past');
+      console.log('Past');
+    } else if (timeBlockHour === currentHour) {
+      $(this).removeClass('past future').addClass('present');
+      console.log('Present');
+    } else {
+      $(this).removeClass('past present').addClass('future');
+      console.log('Future');
+    }
+
+    // TODO: Add code to get any user input that was saved in localStorage and set
+    // the values of the corresponding textarea elements.
+    var userInput = localStorage.getItem(timeBlockHour.toString());
+    if (userInput) {
+      $(this).find('.description').val(userInput);
+    }
+  });
 });
 
-});
+
+
