@@ -11,6 +11,4 @@ N/A
 
 ## Usage
 
-    ```md
-    ![Work Day Scheduler screenshot](assets/images/work-day-scheduler.png)
-    ```
+![Work Day Scheduler screenshot](assets/images/work-day-scheduler.png)
